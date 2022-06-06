@@ -1,0 +1,7 @@
+KBUILD_VERBOSE = 1
+export KBUILD_VERBOSE
+
+AUTOCONF = $(KERNDIR)/include/generated/autoconf.h
+
+# gcc system include path
+SYSINC = $(shell gcc -print-search-dirs | grep install | cut -c 10-)include
